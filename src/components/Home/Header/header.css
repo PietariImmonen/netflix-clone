@@ -1,0 +1,69 @@
+.header {
+    margin: 0;
+}
+
+.header-text {
+    margin-left: 4rem;
+    max-width: 50%;
+    z-index: 5;
+    position: absolute;
+    top: 45%;
+}
+
+.header-text-h1 {
+    font-size: 64px;
+    margin: 0;
+}
+
+.header-text-h4 {
+    font-size: 30px;
+    margin: 0;
+}
+
+.header-img-img {
+    width: 100vw;
+    height: auto;
+    z-index: 0;
+}
+
+.header-buttons {
+    display: flex;
+    gap: 20px;
+    z-index: 2;
+    width: 466px;
+}
+
+.header-play-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #FFFFFF;
+    width: 175px;
+    height: 62px;
+    border-radius: 4px;
+}
+
+.header-play-button-p {
+    font-size: 24px;
+    color: black;
+}
+
+.Header-FaPlay {
+    margin-right: 1rem;
+}
+
+.header-info-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+    width: 276px;
+    height: 62px;
+    border-radius: 4px;
+}
+
+.header-info-button-p {
+    font-size: 24px;
+}
+
