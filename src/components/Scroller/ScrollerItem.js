@@ -1,9 +1,11 @@
 import React from 'react'
 import './scroller.scss'
 
-const ScrollerItem = ({text}) => {
+const ScrollerItem = ({image}) => {
   return (
-    <div className='scroller-item'>{text}</div>
+    <div className='scroller-item'>
+      <img src={image} alt='' className='scroller-item-img' />
+    </div>
   )
 }
 

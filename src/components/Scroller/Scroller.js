@@ -1,10 +1,11 @@
-
-  import { useRef, useState } from "react";
-
-  import "./scroller.scss";
+import { useRef, useState } from "react";
+import "./scroller.scss";
 import ScrollerItem from "./ScrollerItem";
+import { FaAngleLeft, FaAngleRight } from 'react-icons/fa'
+
+
   
- function Scroller() {
+ function Scroller({header, list}) {
     const [isMoved, setIsMoved] = useState(false);
     const [slideNumber, setSlideNumber] = useState(0);
   
@@ -15,50 +16,33 @@ import ScrollerItem from "./ScrollerItem";
       let distance = listRef.current.getBoundingClientRect().x - 50;
       if (direction === "left" && slideNumber > 0) {
         setSlideNumber(slideNumber - 1);
-        listRef.current.style.transform = `translateX(${230 + distance}px)`;
+        listRef.current.style.transform = `translateX(${(230*6) + distance}px)`;
       }
-      if (direction === "right" && slideNumber < 5) {
+      if (direction === "right" && slideNumber < 2) {
         setSlideNumber(slideNumber + 1);
-        listRef.current.style.transform = `translateX(${-230 + distance}px)`;
+        listRef.current.style.transform = `translateX(${(-230*6) + distance}px)`;
       }
     };
+
     return (
       <div className="list">
-        <span className="listTitle">Continue to watch</span>
+        <span className="listTitle">{header}</span>
         <div className="wrapper">
-          <button
-            className="sliderArrow left"
-            onClick={() => handleClick("left")}
-            style={{ display: !isMoved && "none" }}
-          >Moi</button>
             <button 
                 className="sliderArrow left"
                 onClick={() => handleClick("left")}
                 style={{ display: !isMoved && "none" }}
             >
-                <div className="text">&#8249;</div>
+                <FaAngleLeft size={"30px"}/>
             </button>
           <div className="container" ref={listRef}>
-                <ScrollerItem text='1'/>
-                <ScrollerItem text='2'/>
-                <ScrollerItem text='3'/>
-                <ScrollerItem text='4'/>
-                <ScrollerItem text='5'/>
-                <ScrollerItem text='6'/>
-                <ScrollerItem text='7'/>
-                <ScrollerItem text='8'/>
-                <ScrollerItem text='9'/>
+                {list.map(movie => <ScrollerItem image={movie.img} />)}
                 </div>
-            <button
-                className="sliderArrow right"
-                onClick={() => handleClick("right")}
-            >
-            </button>
             <button 
                 className="sliderArrow right"
                 onClick={() => handleClick("right")}
             >
-                <div className="text">&#8250;</div>
+                <FaAngleRight size={"30px"}/>
             </button>
             </div>
         </div>
