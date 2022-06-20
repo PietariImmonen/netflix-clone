@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useRef, useState, useEffect } from "react";
 import "./scroller.scss";
 import ScrollerItem from "./ScrollerItem";
 import { FaAngleLeft, FaAngleRight } from 'react-icons/fa'
@@ -8,6 +8,24 @@ import { FaAngleLeft, FaAngleRight } from 'react-icons/fa'
  function Scroller({header, list}) {
     const [isMoved, setIsMoved] = useState(false);
     const [slideNumber, setSlideNumber] = useState(0);
+    const [windowDimenion, detectHW] = useState({
+        winWidth: window.innerWidth,
+        winHeight: window.innerHeight,
+      })
+    
+      const detectSize = () => {
+        detectHW({
+          winWidth: window.innerWidth,
+          winHeight: window.innerHeight,
+        })
+      }
+    
+      useEffect(() => {
+        window.addEventListener('resize', detectSize)
+        return () => {
+          window.removeEventListener('resize', detectSize)
+        }
+      }, [windowDimenion])
   
     const listRef = useRef();
   
@@ -16,11 +34,11 @@ import { FaAngleLeft, FaAngleRight } from 'react-icons/fa'
       let distance = listRef.current.getBoundingClientRect().x - 50;
       if (direction === "left" && slideNumber > 0) {
         setSlideNumber(slideNumber - 1);
-        listRef.current.style.transform = `translateX(${(230*6) + distance}px)`;
+        listRef.current.style.transform = `translateX(${(windowDimenion.winWidth) + distance}px)`;
       }
       if (direction === "right" && slideNumber < 2) {
         setSlideNumber(slideNumber + 1);
-        listRef.current.style.transform = `translateX(${(-230*6) + distance}px)`;
+        listRef.current.style.transform = `translateX(${(-windowDimenion.winWidth) + distance}px)`;
       }
     };
 
@@ -36,7 +54,7 @@ import { FaAngleLeft, FaAngleRight } from 'react-icons/fa'
                 <FaAngleLeft size={"30px"}/>
             </button>
           <div className="container" ref={listRef}>
-                {list.map(movie => <ScrollerItem image={movie.img} />)}
+                {list.map(movie => <ScrollerItem image={movie.img} className='scroller-item1' key={movie.id}/>)}
                 </div>
             <button 
                 className="sliderArrow right"
