@@ -1,0 +1,9 @@
+.footerLinks {
+    display: grid;
+    grid-template-columns: 250px 250px 250px 250px;
+}
+
+.footerLink-p {
+    font-size: 12px;
+    color: #4B4B4B;
+}
