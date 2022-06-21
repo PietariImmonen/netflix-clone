@@ -1,16 +1,13 @@
 import React from 'react'
 import Scroller from '../Scroller/Scroller'
-import Scroller2 from '../Scroller2/Scroller2'
 import Header from './Header/Header'
 import { movieList } from '../Scroller/movieList'
+import WholeScroller from '../Scroller/WholeScroller'
 
 const Home = () => {
   return (
     <div>
-        <Scroller 
-        header={"Continue to watch"}
-        list={movieList}
-        />
+        <WholeScroller />
     </div>
   )
 }
