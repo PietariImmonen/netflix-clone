@@ -1,12 +1,12 @@
 import React from 'react'
 import Header from './Header/Header'
-import WholeScroller from '../Scroller/WholeScroller'
+import HomeScroller from './HomeScroller'
 
 const Home = ({data}) => {
   return (
     <div>
         <Header />
-        <WholeScroller data={data}/>
+        <HomeScroller data={data}/>
     </div>
   )
 }

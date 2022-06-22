@@ -1,8 +1,8 @@
 import React from 'react'
-import Scroller from './Scroller'
-import './scroller.scss'
+import Scroller from '../Scroller/Scroller'
+import '../Scroller/scroller.scss'
 
-const WholeScroller = ({data}) => {
+const HomeScroller = ({data}) => {
   return (
     <div className='whole-scroller'>
         <Scroller 
@@ -29,4 +29,4 @@ const WholeScroller = ({data}) => {
   )
 }
 
-export default WholeScroller
+export default HomeScroller
