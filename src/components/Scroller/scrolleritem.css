@@ -1,6 +1,7 @@
 .scroller-item {
     flex: 0 0 calc(100% / var(--items-per-screen));
     width: calc(100% / var(--items-per-screen));
+    padding-right: 5px;
   }
 
 .scroller-item-img {

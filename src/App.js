@@ -34,13 +34,13 @@ function App() {
         <WholeNav />
           <Routes>
             <Route path="/" exact element={<Home data={data}/>}/>
-            <Route path="/series" element={<Series />}/>
-            <Route path="/films" element={<Films />}/>
-            <Route path="/new-popular" element={<NewPopular />}/>
-            <Route path="/my-list" element={<MyList />}/>
-            <Route path="/films" element={<Films />}/>
-            <Route path="/browse-by-languages" element={<BrowseByLanguages />}/>
-            <Route path="/children" element={<Childrens />}/>
+            <Route path="/series" element={<Series data={data}/>}/>
+            <Route path="/films" element={<Films data={data}/>}/>
+            <Route path="/new-popular" element={<NewPopular data={data}/>}/>
+            <Route path="/my-list" element={<MyList data={data}/>}/>
+            <Route path="/films" element={<Films data={data}/>}/>
+            <Route path="/browse-by-languages" element={<BrowseByLanguages data={data}/>}/>
+            <Route path="/children" element={<Childrens data={data}/>}/>
           </Routes>
         <Footer />
       </div>
