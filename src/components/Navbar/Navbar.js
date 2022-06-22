@@ -25,19 +25,19 @@ export default function Navbar(props) {
         <NavLink to='/'>
           Home
         </NavLink>
-        <NavLink to='/stories'>
+        <NavLink to='/series'>
           Series
         </NavLink>
-        <NavLink to='/facts'>
+        <NavLink to='/films'>
           Films
         </NavLink>
-        <NavLink to='/comments'>
+        <NavLink to='/new-popular'>
           New & Popular
         </NavLink>
-        <NavLink to='/comments'>
+        <NavLink to='/my-list'>
           My list
         </NavLink>
-        <NavLink to='/comments'>
+        <NavLink to='/browse-by-languages'>
           Browse by Languages
         </NavLink>
       </NavMenu>
@@ -45,7 +45,7 @@ export default function Navbar(props) {
       <NavLink to='/comments'>
           <FaSearch />
         </NavLink>
-        <NavLink to='/comments'>
+        <NavLink to='/children'>
           Children
         </NavLink>
         <NavLink to='/comments'>

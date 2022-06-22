@@ -22,7 +22,7 @@ export const NavLink = styled(Link)`
     cursor: pointer;
 
     &:hover {
-        color: #1a5f64;
+        color: #F5F1F1;
     }
     &.active {
         color: #FFFFFF;
