@@ -3,28 +3,28 @@ import Scroller from './Scroller'
 import { movieList } from './movieList'
 import './scroller.scss'
 
-const WholeScroller = () => {
+const WholeScroller = ({data}) => {
   return (
     <div className='whole-scroller'>
         <Scroller 
         header={"Continue to watch"}
-        list={movieList}
+        list={data}
         />
         <Scroller 
         header={"Released in the past year"}
-        list={movieList}
+        list={data}
         />
         <Scroller 
         header={"Trending now"}
-        list={movieList}
+        list={data}
         />
         <Scroller 
         header={"Family watch-together films"}
-        list={movieList}
+        list={data}
         />
         <Scroller 
         header={"Hollywood films"}
-        list={movieList}
+        list={data}
         />
     </div>
   )

@@ -2,11 +2,11 @@ import React from 'react'
 import Header from './Header/Header'
 import WholeScroller from '../Scroller/WholeScroller'
 
-const Home = () => {
+const Home = ({data}) => {
   return (
     <div>
         <Header />
-        <WholeScroller />
+        <WholeScroller data={data}/>
     </div>
   )
 }

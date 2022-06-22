@@ -9,14 +9,31 @@ import NewPopular from "./components/NewPopular/NewPopular";
 import MyList from "./components/MyList/MyList";
 import BrowseByLanguages from "./components/BrowseByLanguages/BrowseByLanguages";
 import Childrens from "./components/Children/Children";
+import { useEffect, useState } from "react";
+import { getAll } from "./services/posts"
 
 function App() {
+  const [data, setData] = useState([])
+
+
+  const getData = async () => {
+    const datas = await getAll()
+    setData(datas)
+  }
+  
+  useEffect(
+    ()=> {
+      getData()
+    }
+  , [])
+
+
   return (
     <Router>
       <div className="App">
         <WholeNav />
           <Routes>
-            <Route path="/" exact element={<Home />}/>
+            <Route path="/" exact element={<Home data={data}/>}/>
             <Route path="/series" element={<Series />}/>
             <Route path="/films" element={<Films />}/>
             <Route path="/new-popular" element={<NewPopular />}/>
