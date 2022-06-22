@@ -1,9 +1,12 @@
 import React from 'react'
 import './films.css'
+import FilmsScroller from './FilmsScroller'
 
-const Films = () => {
+const Films = ({data}) => {
   return (
-    <div>Films</div>
+    <div>
+      <FilmsScroller data={data}/>
+    </div>
   )
 }
 
