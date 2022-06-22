@@ -1,0 +1,15 @@
+.myList {
+    margin-left: 4rem;
+    height: 100vh;
+}
+
+.myList-text {
+    margin-top: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.myList-text-p {
+    color: #666666;
+}

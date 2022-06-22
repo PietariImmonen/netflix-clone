@@ -1,0 +1,10 @@
+.browse-items {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 250px 250px 250px 250px 250px;
+    margin-left: 4rem;
+}
+
+.browse-items-item {
+    width: calc(100% / 6);
+}

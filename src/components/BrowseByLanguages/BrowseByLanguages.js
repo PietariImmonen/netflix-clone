@@ -1,9 +1,12 @@
 import React from 'react'
 import './browseByLanguages.css'
+import BrowseItems from './BrowseItems'
 
-const BrowseByLanguages = () => {
+const BrowseByLanguages = ({data}) => {
   return (
-    <div>BrowseByLanguages</div>
+    <div>
+      <BrowseItems data={data}/>
+    </div>
   )
 }
 

@@ -1,9 +1,14 @@
 import React from 'react'
+import Header from '../Header/Header'
 import './children.css'
+import ChildrenScroller from './ChildrenScroller'
 
-const Childrens = () => {
+const Childrens = ({data}) => {
   return (
-    <div>Children</div>
+    <div>
+      <Header />
+      <ChildrenScroller data={data}/>
+    </div>
   )
 }
 
