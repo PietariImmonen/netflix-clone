@@ -41,6 +41,12 @@
     width: 175px;
     height: 62px;
     border-radius: 4px;
+    cursor: pointer;
+}
+
+.header-play-button:hover {
+    width: 200px;
+    height: 75px;
 }
 
 .header-play-button-p {
@@ -61,6 +67,12 @@
     width: 276px;
     height: 62px;
     border-radius: 4px;
+    cursor: pointer;
+}
+
+.header-info-button:hover {
+    width: 300px;
+    height: 75px;
 }
 
 .header-info-button-p {
