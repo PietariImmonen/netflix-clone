@@ -7,7 +7,7 @@ const BrowseItems = ({data}) => {
     <div className='browse-items'>
         {data.map(item => {
             return(
-                <ScrollerItem index={item.id} image={item.img} className='browse-items-item'/>
+                <ScrollerItem key={item.id} image={item.img} className='browse-items-item'/>
             )
         })}
     </div>
