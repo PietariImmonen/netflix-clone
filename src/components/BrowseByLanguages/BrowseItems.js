@@ -1,5 +1,5 @@
 import React from 'react'
-import ScrollerItem from '../Scroller/ScrollerItem'
+import BrowseItem from './BrowseItem'
 import './browseItems.css'
 
 const BrowseItems = ({data}) => {
@@ -7,7 +7,7 @@ const BrowseItems = ({data}) => {
     <div className='browse-items'>
         {data.map(item => {
             return(
-                <ScrollerItem key={item.id} image={item.img} className='browse-items-item'/>
+                <BrowseItem key={item.id} image={item.img} className='browse-items-item'/>
             )
         })}
     </div>

@@ -1,0 +1,33 @@
+.browse-container {
+    margin-left: 4rem;
+    display: flex;
+    gap: 20px;
+}
+
+.browse-form {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.browse-select {
+    background-color: black;
+    border: 2px solid #FFFFFF;
+    color: #FFFFFF;
+}
+
+.first {
+    width: 200px;
+    height: 30px;
+}
+
+.second {
+    width: 250px;
+    height: 30px;
+}
+
+.third {
+    width: 230px;
+    height: 30px;
+}
+

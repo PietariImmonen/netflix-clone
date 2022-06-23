@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import './browseByLanguages.css'
 import BrowseForm from './BrowseForm'
 import BrowseItems from './BrowseItems'
 
