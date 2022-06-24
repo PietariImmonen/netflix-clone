@@ -2,3 +2,17 @@
     max-width: 111px;
     padding-top: 0.3rem;
 }
+
+.navbar-Search-form {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.navbarSearch-input {
+    width: 250px;
+    height: 25px;
+    background-color: #151515;
+    border: 2px solid #FFFFFF;
+    color: #FFFFFF;
+}

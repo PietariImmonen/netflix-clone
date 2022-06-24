@@ -33,13 +33,14 @@ import { FaAngleLeft, FaAngleRight } from 'react-icons/fa'
     const handleClick = (direction) => {
       setIsMoved(true)
       setClicked(clicked + 1)
+      let maxClick = Math.floor(list.length/6.1)
       const distance = listRef.current.getBoundingClientRect().x - 50
-      console.log(distance)
+      console.log(maxClick)
       if (direction === "left" && slideNumber > 0) {
         setSlideNumber(slideNumber - 1)
         listRef.current.style.transform = `translateX(${(windowDimenion.winWidth) + distance}px)`
       }
-      if (direction === "right" && slideNumber < 2) {
+      if (direction === "right" && slideNumber < maxClick) {
         setSlideNumber(slideNumber + 1)
         listRef.current.style.transform = `translateX(${(-windowDimenion.winWidth) + distance}px)`
       }

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import {
   Nav,
   NavLink,
@@ -8,15 +8,27 @@ import {
 import "./navbar.css"
 import { FaSearch } from 'react-icons/fa';
 import { IoNotifications } from 'react-icons/io5'
+import NavbarSearch from './NavbarSearch';
 
 export default function Navbar(props) {
+
+  const [search, setSearch] = useState(false)
+  const[navSearch, setNavSearch] = useState('')
+
+  const handleClick = (event) => {
+    setNavSearch(event.target.value)
+  }
+
+  const closeClick = () => {
+    setSearch(!search)
+  }
 
   //all the contents of Navbar, used styled components
   return (
     <>
     <Nav>
       <Bars onClick={props.helper}/>
-      <NavMenu>
+      <NavMenu onClick={() => setSearch(false)}>
         <NavLink to='/'>
             <div className='nav-header'>
             <img src='../Logonetflix.png' alt='' className='navbar-netflix-logo'/>
@@ -42,9 +54,11 @@ export default function Navbar(props) {
         </NavLink>
       </NavMenu>
       <NavMenu style={{marginRight: '2rem'}}>
-      <NavLink to='/comments'>
-          <FaSearch />
-        </NavLink>
+          {search ? <NavbarSearch 
+          handleClick={handleClick}
+          navSearch={navSearch}
+          search={search}
+          closeClick={closeClick}/> : <FaSearch onClick={closeClick}/>}
         <NavLink to='/children'>
           Children
         </NavLink>
